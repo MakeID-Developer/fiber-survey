@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/xc_background" android:weightSum="5">
+    <LinearLayout android:id="@+id/log_panel" android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="2" android:orientation="vertical" android:padding="12dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="@string/xc_log_title" android:textStyle="bold" android:textSize="18sp" android:textColor="@color/xc_heading" />
+            <CheckBox android:id="@+id/follow_log" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:checked="true" android:text="@string/xc_follow" />
+            <Button android:id="@+id/clear_log" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/xc_clear" />
+        </LinearLayout>
+        <CheckBox android:id="@+id/raw_log" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/xc_raw_log" android:checked="true" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/log_list"
+            android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+            android:background="@drawable/bg_xc_card" android:padding="6dp" />
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#CCDAD7" />
+    <ScrollView android:id="@+id/operation_scroll" android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="3" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/app_name" android:textSize="22sp" android:textColor="@color/xc_heading" android:textStyle="bold" />
+            <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/xc_idle" android:paddingTop="8dp" android:paddingBottom="8dp" />
+            <TextView android:id="@+id/device" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="—" />
+            <TextView android:id="@+id/mtu" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/xc_mtu_initial" />
+            <TextView android:id="@+id/mtu_warning" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/xc_mtu_warn" android:textColor="@color/xc_error" android:visibility="gone" />
+            <Button android:id="@+id/scan" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/xc_scan" />
+            <EditText android:id="@+id/host_id" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="@string/xc_host_hint" android:inputType="textNoSuggestions" android:singleLine="true" android:saveEnabled="false" />
+            <Button android:id="@+id/connect_id" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/xc_connect_id" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/xc_filter_title" android:textStyle="bold" android:paddingTop="12dp" />
+            <EditText android:id="@+id/filter_input" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="@string/xc_filter_hint" android:inputType="textMultiLine|textNoSuggestions" android:maxLines="4" android:saveEnabled="false" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button android:id="@+id/apply_filter" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/xc_apply_filter" />
+                <Button android:id="@+id/clear_filter" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/xc_clear_filter" />
+            </LinearLayout>
+            <TextView android:id="@+id/filter_state" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/xc_filter_off" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/xc_filter_scope" android:textColor="@color/xc_error" />
+            <Button android:id="@+id/shutdown" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/xc_shutdown" android:enabled="false" />
+            <TextView android:id="@+id/result" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/xc_result_initial" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button android:id="@+id/disconnect" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/xc_disconnect" />
+                <Button android:id="@+id/release" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/xc_release" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="@string/xc_event_title" android:textStyle="bold" />
+                <Button android:id="@+id/clear_events" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/xc_clear" />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/event_list"
+                android:layout_width="match_parent" android:layout_height="220dp" android:background="@drawable/bg_xc_card"
+                android:nestedScrollingEnabled="true" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/xc_safety_note" android:textSize="12sp" android:paddingTop="12dp" />
+            <Button android:id="@+id/about" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/xc_about" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <color name="xc_background">#F4F8F7</color>
+    <color name="xc_heading">#124C46</color>
+    <color name="xc_error">#B3261E</color>
+    <color name="xc_ready">#2E7D32</color>
+    <color name="xc_busy">#A56300</color>
+    <color name="xc_idle">#607D8B</color>
+</resources>

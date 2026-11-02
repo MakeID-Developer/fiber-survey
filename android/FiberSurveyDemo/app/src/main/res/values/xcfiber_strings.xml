@@ -1,0 +1,29 @@
+<resources>
+    <string name="xc_log_title">本地操作日志</string>
+    <string name="xc_follow">跟随最新</string>
+    <string name="xc_clear">清空</string>
+    <string name="xc_raw_log">显示原始 TX/RX JSON（本地，可能含设备标签编码）</string>
+    <string name="xc_idle">未连接，请选择主机</string>
+    <string name="xc_mtu_initial">MTU / 载荷：—</string>
+    <string name="xc_mtu_warn">载荷小于21字节，命令将分包，请在目标设备受控验证关机。</string>
+    <string name="xc_scan">扫描列表选择主机</string>
+    <string name="xc_host_hint">主机编号，例如000002或TR-FID-000002</string>
+    <string name="xc_connect_id">按主机编号连接</string>
+    <string name="xc_filter_title">探测器 ID 白名单（不是主机编号）</string>
+    <string name="xc_filter_hint">如000011,A-1；逗号/分号/空白分隔</string>
+    <string name="xc_apply_filter">应用白名单</string>
+    <string name="xc_clear_filter">清空并全部放行</string>
+    <string name="xc_filter_off">放行全部（未启用过滤）</string>
+    <string name="xc_filter_scope">白名单只过滤本地事件，不限制一键关机范围。</string>
+    <string name="xc_shutdown">一键关机 · 需再次确认</string>
+    <string name="xc_result_initial">尚未发送关机命令</string>
+    <string name="xc_disconnect">断开当前会话</string>
+    <string name="xc_release">释放 / 取消等待</string>
+    <string name="xc_event_title">探测器事件（最新在上）</string>
+    <string name="xc_safety_note">power_down / 非up可能来自未知或缺失字段，请结合原文。\n命令ACK不等于已核验全部设备断电。超时/断线不自动重发。\n仅BLE本地参考Demo，无云平台或AppID鉴权。</string>
+    <string name="xc_about">版本 / 使用与验证说明</string>
+    <string name="xc_scan_title">选择 TR-FID 主机</string>
+    <string name="xc_rescan">重新扫描（15秒）</string>
+    <string name="xc_stop_scan">停止本轮扫描</string>
+    <string name="xc_cancel_selection">取消并返回</string>
+</resources>

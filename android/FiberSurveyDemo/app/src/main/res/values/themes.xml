@@ -1,0 +1,11 @@
+<resources>
+    <!-- Deliberately light: custom white log/scan cards remain readable in system night mode. -->
+    <style name="Theme.FiberSurveyDemo" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#126B62</item>
+        <item name="colorPrimaryVariant">#124C46</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#126B62</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

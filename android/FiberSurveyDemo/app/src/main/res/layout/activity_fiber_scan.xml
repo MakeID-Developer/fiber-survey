@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp" android:background="@color/xc_background">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/xc_scan_title" android:textSize="22sp" android:textStyle="bold" />
+    <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/devices"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="@drawable/bg_xc_card" />
+    <Button android:id="@+id/rescan" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/xc_rescan" />
+    <Button android:id="@+id/stop" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/xc_stop_scan" />
+    <Button android:id="@+id/back" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/xc_cancel_selection" />
+</LinearLayout>
