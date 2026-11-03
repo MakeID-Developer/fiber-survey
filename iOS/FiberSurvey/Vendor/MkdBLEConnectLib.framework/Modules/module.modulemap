@@ -1,0 +1,6 @@
+framework module MkdBLEConnectLib {
+  umbrella header "MkdBLEConnectLib.h"
+  export *
+
+  module * { export * }
+}

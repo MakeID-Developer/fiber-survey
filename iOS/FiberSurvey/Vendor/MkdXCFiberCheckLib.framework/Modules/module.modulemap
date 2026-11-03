@@ -1,0 +1,6 @@
+framework module MkdXCFiberCheckLib {
+  umbrella header "MkdXCFiberCheckLib.h"
+  export *
+
+  module * { export * }
+}
